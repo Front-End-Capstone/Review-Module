@@ -1,0 +1,33 @@
+{
+  "name": "Front-End",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Front-End-Capstone/Review-Module.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Front-End-Capstone/Review-Module/issues"
+  },
+  "homepage": "https://github.com/Front-End-Capstone/Review-Module#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.0-beta.4",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "webpack": "^4.16.1"
+  }
+}
