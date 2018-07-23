@@ -1,4 +1,5 @@
 const express = require ('express');
+const model = require('../model/index.js')
 const router = express.Router();
 
 router.get('/data', (req, res) => {

@@ -16,6 +16,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const router = require('./router.js');
+const faker = require('faker');
 const app = express();
 const port = 8080;
 

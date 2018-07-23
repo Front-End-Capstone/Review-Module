@@ -5,7 +5,7 @@ class HeadWrapper extends Component {
     return (
       <div className="HeadWrapper">
         <a href="#">
-          <img src="https://a0.muscache.com/im/pictures/f3a73646-bdc7-47b4-a47e-762febff3681.jpg?aki_policy=profile_small" />
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/aaronkwhite/128.jpg" />
         </a>
         <h4>Jannik</h4>
         <h4>July 18, 2018</h4>
