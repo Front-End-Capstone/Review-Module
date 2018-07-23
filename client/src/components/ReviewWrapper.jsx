@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ItemWrapper from "./Reviews/Wrapper.jsx";
+import ItemWrapper from "./Reviews/ItemWrapper.jsx";
 
 class ReviewWrapper extends Component {
   render() {
@@ -8,7 +8,9 @@ class ReviewWrapper extends Component {
         <div className="titleWrapper">
           <h1 className="review">Reviews</h1>
         </div>
-        <ItemWrapper />
+        {this.props.data.map(review => {
+          return <ItemWrapper review={review} />;
+        })}
       </div>
     );
   }

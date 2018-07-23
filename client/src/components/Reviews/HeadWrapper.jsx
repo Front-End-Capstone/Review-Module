@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import moment from "moment";
 
 class HeadWrapper extends Component {
   render() {
     return (
       <div className="HeadWrapper">
         <a href="#">
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/aaronkwhite/128.jpg" />
+          <img src={this.props.review.img} />
         </a>
-        <h4>Jannik</h4>
-        <h4>July 18, 2018</h4>
+        <h4>{this.props.review.firstName}</h4>
+        <h4>{moment(this.props.review.date).format("MMMM D, YYYY")}</h4>
       </div>
     );
   }

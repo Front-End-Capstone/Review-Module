@@ -3,7 +3,13 @@ const model = require('../model/index.js')
 const router = express.Router();
 
 router.get('/data', (req, res) => {
-  res.send('hello');
+  model.users.find({}).sort({date: -1}).exec((err, data) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.send(data);
+    }
+  })
 })
 
 router.post('/data', (req, res) => {

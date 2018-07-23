@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import HeadWrapper from "./HeadWrapper.jsx";
 import MessageWrapper from "./MessageWrapper.jsx";
 
-class Wrapper extends Component {
+class ItemWrapper extends Component {
   render() {
     return (
       <div className="itemWrapper">
-        <HeadWrapper />
-        <MessageWrapper />
+        <HeadWrapper review={this.props.review} />
+        <MessageWrapper review={this.props.review} />
       </div>
     );
   }
 }
 
-export default Wrapper;
+export default ItemWrapper;

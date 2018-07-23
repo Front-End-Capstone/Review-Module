@@ -5,10 +5,7 @@ class MessageWrapper extends Component {
     return (
       <div className="messageWrapper">
         <span className="message">
-          Amazing walk up Hollywood Hill with beautiful views upon the city. The
-          guide Leopold seems to know pretty much everything about the city,
-          it’s super entertaining listening to all the small (Website hidden by
-          Airbnb) and stories he has to tell. Great start to any LA vacation!
+          {this.props.review.review}
           <button type="button">
             <span>+ More</span>
           </button>
