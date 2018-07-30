@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import axios from "axios";
 import ReviewWrapper from "./components/ReviewWrapper.jsx";
 import SideBar from "./components/SideBar.jsx";
+import AllReviews from "./components/AllReviews.jsx";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      show: false
     };
     this.handleLoad = this.handleLoad.bind(this);
+    this.handleModal = this.handleModal.bind(this);
   }
 
   componentDidMount() {
@@ -20,14 +24,23 @@ class App extends Component {
   handleLoad() {
     axios.get("/api/data").then(response => {
       this.setState({ data: response.data });
-      console.log(this.state.data);
+    });
+  }
+  //This function will toggle the display of longer reviews
+  handleModal() {
+    console.log("Hello");
+    this.setState({
+      show: !this.state.show
     });
   }
 
   render() {
     return (
       <div className="daddyWrapper">
-        <ReviewWrapper data={this.state.data} />
+        <div className="leftSideWrapper">
+          <ReviewWrapper data={this.state.data} toggle={this.toggleMore} />
+          <AllReviews modal={this.handleModal} show={this.state.show} />
+        </div>
         <SideBar />
       </div>
     );

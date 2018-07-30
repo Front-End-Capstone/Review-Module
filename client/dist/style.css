@@ -12,7 +12,9 @@ div {
 .daddyWrapper {
   display: flex;
 }
-
+.leftSideWrapper {
+  flex: 1;
+}
 .reviewWrapper {
   flex: 1;
 }
@@ -27,13 +29,13 @@ div {
 
 .itemWrapper {
   padding: 24px 0px;
-  background: lightgray;
+  /* background: lightgray; */
   border-bottom: 1px solid #dbdbdb;
 }
 
 .HeadWrapper {
   position: relative;
-  background: darkgray;
+  /* background: darkgray; */
   padding-left: 68px;
   min-height: 48px;
 }
@@ -50,9 +52,6 @@ div {
   margin-top: 24px;
 }
 
-.message {
-}
-
 .message button {
   color: #008489;
 }
@@ -66,4 +65,79 @@ div {
   width: 90%;
   margin-left: auto;
   background-color: aqua;
+}
+
+.more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+}
+
+.bigButton {
+  min-width: 100%;
+}
+
+.readReviewsWrapper {
+  display: flex;
+  background-color: #008489;
+  padding: 24px 0;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+.readReviewsWrapper:hover {
+  cursor: pointer;
+}
+
+.readReviewLeft {
+  text-align: left;
+  flex: 1;
+}
+.readReviewLeft span:hover {
+  text-decoration: underline;
+}
+
+.readReviewRight {
+  text-align: right;
+  flex: 1;
+  background-color: blue;
+}
+
+.modal-wrapper {
+  position: fixed !important;
+  z-index: 2000 !important;
+  top: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  overflow-y: auto !important;
+}
+
+.modal-overlay {
+  display: table !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+.modal {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  padding: 64px !important;
+}
+.modal-guts {
+  background-color: rgb(255, 255, 255) !important;
+  max-width: 568px !important;
+  width: 100% !important;
+  position: relative !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px 0px !important;
+  margin: auto !important;
+}
+.allReviewsWrapper {
+  padding: 32px;
+}
+
+.xWrapper {
+  margin-bottom: 24px;
+}
+.allReviewsWrapper header h1 {
+  padding-bottom: 24px;
 }

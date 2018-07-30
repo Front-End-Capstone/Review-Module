@@ -7,7 +7,7 @@ class ItemWrapper extends Component {
     return (
       <div className="itemWrapper">
         <HeadWrapper review={this.props.review} />
-        <MessageWrapper review={this.props.review} />
+        <MessageWrapper review={this.props.review} toggle={this.props.toggle} />
       </div>
     );
   }
