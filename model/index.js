@@ -35,4 +35,4 @@ module.exports = {users};
 // console.log(faker.name.firstName());
 // console.log(faker.lorem.sentences(2));
 // console.log(faker.image.avatar());
-console.log(moment(faker.date.between("03-17-2017", "07-25-2018")).format("MMMM D YYYY"));
+//console.log(moment(faker.date.between("03-17-2017", "07-25-2018")).format("MMMM D YYYY"));

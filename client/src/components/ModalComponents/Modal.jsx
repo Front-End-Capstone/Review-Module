@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ModalHead from "./ModalComponents/ModalHead.jsx";
-import ModalBody from "./ModalComponents/ModalBody.jsx";
+import ModalHead from "./ModalHead.jsx";
+import ModalBody from "./ModalBody.jsx";
 
 class Modal extends Component {
   render() {
@@ -18,7 +18,9 @@ class Modal extends Component {
           <div className="modal">
             <div className="modal-guts">
               <ModalHead />
-              <ModalBody />
+              {this.props.data.map(review => {
+                return <ModalBody review={review} />;
+              })}
             </div>
           </div>
         </div>

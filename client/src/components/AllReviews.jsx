@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from "./Reviews/Modal.jsx";
+import Modal from "./ModalComponents/Modal.jsx";
 import axios from "axios";
 
 class AllReviews extends Component {
@@ -14,7 +14,11 @@ class AllReviews extends Component {
             <span className="readReviewRight">Add Stars</span>
           </div>
         </button>
-        <Modal modal={this.props.modal} show={this.props.show} />
+        <Modal
+          modal={this.props.modal}
+          show={this.props.show}
+          data={this.props.data}
+        />
       </div>
     );
   }

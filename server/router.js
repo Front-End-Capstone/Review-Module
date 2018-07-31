@@ -12,6 +12,16 @@ router.get('/data', (req, res) => {
   })
 })
 
+router.get('/data/all', (req, res) => {
+  model.users.find({}).sort({date: -1}).exec((err,data) => {
+    if(err) {
+      console.log(err)
+    } else {
+      res.send(data);
+    }
+  })
+})
+
 router.post('/data', (req, res) => {
 
 })

@@ -11,24 +11,36 @@ class App extends Component {
     super(props);
     this.state = {
       data: [],
+      allReviews: [],
       show: false
     };
-    this.handleLoad = this.handleLoad.bind(this);
+    this.handleLoadTop5 = this.handleLoadTop5.bind(this);
     this.handleModal = this.handleModal.bind(this);
+    this.handleLoadAll = this.handleLoadAll.bind(this);
   }
 
   componentDidMount() {
-    this.handleLoad();
+    this.handleLoadTop5();
   }
 
-  handleLoad() {
+  handleLoadTop5() {
     axios.get("/api/data").then(response => {
       this.setState({ data: response.data });
     });
   }
+
+  handleLoadAll() {
+    axios.get("/api/data/all").then(response => {
+      this.setState({ allReviews: response.data });
+      console.log(this.state.allReviews);
+    });
+  }
   //This function will toggle the display of longer reviews
   handleModal() {
-    console.log("Hello");
+    axios.get("/api/data/all").then(response => {
+      this.setState({ allReviews: response.data });
+      console.log(this.state.allReviews);
+    });
     this.setState({
       show: !this.state.show
     });
@@ -39,7 +51,11 @@ class App extends Component {
       <div className="daddyWrapper">
         <div className="leftSideWrapper">
           <ReviewWrapper data={this.state.data} toggle={this.toggleMore} />
-          <AllReviews modal={this.handleModal} show={this.state.show} />
+          <AllReviews
+            modal={this.handleModal}
+            show={this.state.show}
+            data={this.state.allReviews}
+          />
         </div>
         <SideBar />
       </div>
