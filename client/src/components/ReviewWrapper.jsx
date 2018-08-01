@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import ItemWrapper from "./Reviews/ItemWrapper.jsx";
+import style from "../styles/ReviewWrapper.css";
 
 class ReviewWrapper extends Component {
   render() {
     return (
-      <div className="reviewWrapper">
-        <div className="titleWrapper">
-          <h1 className="review">Reviews</h1>
+      <div className={style.reviewWrapper}>
+        <div className={style.titleWrapper}>
+          <h1 className={style.review}>Reviews</h1>
         </div>
 
         {this.props.data.map(review => {

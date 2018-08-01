@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import moment from "moment";
-
+import style from "../../styles/Reviews/HeadWrapper.css";
 class HeadWrapper extends Component {
   render() {
     return (
-      <div className="HeadWrapper">
+      <div className={style.HeadWrapper}>
         <a href="#">
           <img src={this.props.review.img} />
         </a>

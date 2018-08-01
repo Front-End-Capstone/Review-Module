@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import style from "../../styles/Reviews/MessageWrapper.css";
 
 class MessageWrapper extends Component {
   constructor(props) {
@@ -35,13 +36,13 @@ class MessageWrapper extends Component {
     };
 
     return (
-      <div className="messageWrapper">
-        <span className="message">
+      <div className={style.messageWrapper}>
+        <span className={style.message}>
           {this.state.currentReview || this.props.review.review}
           <button type="button">
             <span
               style={show}
-              className="more"
+              className={style.more}
               onClick={() => this.toggleMore()}
             >
               + More
