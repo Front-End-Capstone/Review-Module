@@ -5,6 +5,10 @@
   border: 0;
 }
 
+button {
+  background-color: white;
+}
+
 div {
   display: block;
 }
@@ -14,6 +18,7 @@ div {
 }
 .leftSideWrapper {
   flex: 1;
+  padding: 0 0 0 32px;
 }
 .reviewWrapper {
   flex: 1;
@@ -74,34 +79,54 @@ div {
 }
 
 .bigButton {
-  min-width: 100%;
+  width: 100%;
+  background: transparent !important;
+  border: 0px !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  text-align: left !important;
+  vertical-align: bottom !important;
 }
 
 .readReviewsWrapper {
   display: flex;
-  background-color: #008489;
+  color: #008489;
   padding: 24px 0;
   border-bottom: 1px solid lightgray;
-  margin-bottom: 20px;
 }
 .readReviewsWrapper:hover {
   cursor: pointer;
 }
 
 .readReviewLeft {
-  text-align: left;
+  float: left;
   flex: 1;
+  display: inline;
 }
 .readReviewLeft span:hover {
   text-decoration: underline;
 }
 
 .readReviewRight {
+  float: right;
   text-align: right;
   flex: 1;
-  background-color: blue;
 }
 
+.star {
+  margin-right: 6px;
+  height: 16px;
+  width: 16px;
+  color: rgb(0, 132, 137) !important;
+}
+
+.Star {
+  height: 1em;
+  width: 1em;
+  display: inline;
+  fill: currentColor;
+}
 .modal-wrapper {
   position: fixed !important;
   z-index: 2000 !important;
@@ -140,4 +165,8 @@ div {
 }
 .allReviewsWrapper header h1 {
   padding-bottom: 24px;
+}
+
+.modal-body-wrapper {
+  padding: 0px 20px;
 }

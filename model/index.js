@@ -21,7 +21,7 @@ module.exports = {users};
 
 //Create users
 
-// for (let i = 0; i < 1; i++) {
+// for (let i = 0; i < 33; i++) {
 //   users.create({firstName: faker.name.firstName(), review: faker.lorem.sentences(2), img: faker.image.avatar(), date: faker.date.between("2017-03-17", "2018-07-25")},
 //   (err, data) => {
 //     if (err) {
@@ -35,4 +35,4 @@ module.exports = {users};
 // console.log(faker.name.firstName());
 // console.log(faker.lorem.sentences(2));
 // console.log(faker.image.avatar());
-//console.log(moment(faker.date.between("03-17-2017", "07-25-2018")).format("MMMM D YYYY"));
+// console.log(moment(faker.date.between("03-17-2017", "07-25-2018")).format("MMMM D YYYY"));

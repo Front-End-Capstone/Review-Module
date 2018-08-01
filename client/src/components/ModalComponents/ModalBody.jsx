@@ -5,10 +5,21 @@ import ReviewBody from "./ModalReviewComponents/ReviewBody.jsx";
 class ModalBody extends Component {
   render() {
     return (
-      <div className="itemWrapper">
-        <ReviewHead review={this.props.review} />
-        <ReviewBody review={this.props.review} toggle={this.props.toggle} />
-      </div>
+      <section>
+        <div className="allReviewsWrapper">
+          <div className="xWrapper">X</div>
+          <header>
+            <h1>Reviews</h1>
+          </header>
+
+          {this.props.data.map(review => (
+            <div className="itemWrapper">
+              <ReviewHead review={review} />
+              <ReviewBody review={review} toggle={this.props.toggle} />
+            </div>
+          ))}
+        </div>
+      </section>
     );
   }
 }

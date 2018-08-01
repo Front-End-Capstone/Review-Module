@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ModalHead from "./ModalHead.jsx";
 import ModalBody from "./ModalBody.jsx";
 
 class Modal extends Component {
@@ -17,10 +16,7 @@ class Modal extends Component {
         <div className="modal-overlay">
           <div className="modal">
             <div className="modal-guts">
-              <ModalHead />
-              {this.props.data.map(review => {
-                return <ModalBody review={review} />;
-              })}
+              <ModalBody data={this.props.data} />
             </div>
           </div>
         </div>

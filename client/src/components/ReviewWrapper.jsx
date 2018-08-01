@@ -8,6 +8,7 @@ class ReviewWrapper extends Component {
         <div className="titleWrapper">
           <h1 className="review">Reviews</h1>
         </div>
+
         {this.props.data.map(review => {
           return <ItemWrapper review={review} toggle={this.props.toggle} />;
         })}

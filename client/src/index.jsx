@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import axios from "axios";
 import ReviewWrapper from "./components/ReviewWrapper.jsx";
 import SideBar from "./components/SideBar.jsx";
-import AllReviews from "./components/AllReviews.jsx";
+import ModalReviews from "./components/ModalReviews.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -49,14 +49,14 @@ class App extends Component {
   render() {
     return (
       <div className="daddyWrapper">
-        <div className="leftSideWrapper">
+        <section className="leftSideWrapper">
           <ReviewWrapper data={this.state.data} toggle={this.toggleMore} />
-          <AllReviews
+          <ModalReviews
             modal={this.handleModal}
             show={this.state.show}
             data={this.state.allReviews}
           />
-        </div>
+        </section>
         <SideBar />
       </div>
     );
