@@ -1,6 +1,17 @@
 const mongoose = require('mongoose');
-const faker = require('faker');
-const moment = require('moment')
+//Set up default mongoose connection
+const mongoDB = 'mongodb://localhost/capStoneUsers';
+mongoose.connect(mongoDB);
+
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+
+//Get the default connection
+var db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema ({
@@ -22,7 +33,7 @@ module.exports = {users};
 //Create users
 
 // for (let i = 0; i < 33; i++) {
-//   users.create({firstName: faker.name.firstName(), review: faker.lorem.sentences(2), img: faker.image.avatar(), date: faker.date.between("2017-03-17", "2018-07-25")},
+//   users.create({firstName: faker.name.firstName(), review: faker.lorem.sentences(4), img: faker.image.avatar(), date: faker.date.between("2017-03-17", "2018-07-25")},
 //   (err, data) => {
 //     if (err) {
 //       console.log(err)
